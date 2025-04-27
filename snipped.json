@@ -13,84 +13,97 @@
 	// 	"description": "Log output to console"
 	// }
 	"1": {
-		"prefix": "topG",
+		"prefix": "topG2",
 		"body": [
-			"#include <bits/stdc++.h>",
-			"using namespace std;",
-			"typedef long long ll;",
-			"typedef long double ld;",
-			"",
-			"#define pb push_back",
-			"#define MOD 1000000007",
-			"#define vll vector<ll>",
-                  "#define pll pair<ll, ll>",
-                  "#define endl \"\\n\" ",
-			"#define all(v) v.begin(), v.end()",
-			"#define mem(a,b) memset(a, b, sizeof(a))",
-			"#define co(n) cout << n << endl",
-			"#define yes cout << \"YES\" << endl",
-			"#define no cout << \"NO\" << endl",
-			"#define fr(x, n) for (int i = x; i < n; ++i)",
-			"#define fraction(x) cout << fixed << setprecision(x)",
-			"#define Baba_Yaga ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);",
-			" ",
-			"const double eps = 1e-9;",
-			"const int N = 2e5+123;",
-			"",			
-			"ll gcd(ll a,ll b) { return __gcd(a,b); }",
-                  "ll lcm(ll a,ll b) { return (a*b)/__gcd(a,b); }",
-                  "",
-                  "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
-                  "int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};",
-			"",
-			"void solve()",
-			"{",
-			"",
-			"}",
-			"",
-			"// --- Think the problem backwards ---",
-			"",
-			"int main()",
-			"{",
-			"    Baba_Yaga;",
-			"    ll tc = 1; cin >> tc;",
-			"    while(tc--) solve();",
-			"}"
+            "#include <bits/stdc++.h>",
+            "using namespace std;",
+            "typedef long long ll;",
+            "typedef long double ld;",
+            "",
+            "#define pb push_back",
+            "#define MOD 1000000007",
+            "#define vll vector<ll>",
+            "#define pll pair<ll, ll>",
+            "#define endl \"\\n\" ",
+            "#define all(v) v.begin(), v.end()",
+            "#define mem(a,b) memset(a, b, sizeof(a))",
+            "#define co(n) cout << n << endl",
+            "#define yes cout << \"YES\" << endl",
+            "#define no cout << \"NO\" << endl",
+            "#define fr(x, n) for (int i = x; i < n; ++i)",
+            "#define fraction(x) cout << fixed << setprecision(x)",
+            "#define Baba_Yaga ios_base::sync_with_stdio(0); cin.tie(NULL); cout.tie(NULL);",
+            " ",
+            "const double eps = 1e-9;",
+            "const int N = 2e5+123;",
+            "",			
+            "ll gcd(ll a,ll b) { return __gcd(a,b); }",
+            "ll lcm(ll a,ll b) { return (a*b)/__gcd(a,b); }",
+            "",
+            "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
+            "int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};",
+            "",
+            "void solve()",
+            "{",
+            "",
+            "}",
+            "",
+            "// --- Think the problem backwards ---",
+            "",
+            "int main()",
+            "{",
+            "    Baba_Yaga;",
+            "    ll tc = 1; cin >> tc;",
+            "    while(tc--) solve();",
+            "}"
 		],
 		"description": ""
 	},
 
 
 	"2": {
-		"prefix": "rrr",
-		"body": [
-                  "#include <bits/stdc++.h>",
-                  "using namespace std;",
-                  "using ll = long long;",
-                  "const int N = 1e7+123;",
-                  "",
-			"void solve() {",
-			"",
-                  "",
-			"",
-			"}",
-                  "",
-                  "int32_t main() {",
-                  "   int t = 1; cin >> t;",
-                  "   for (int i = 1; i <= t; i++) {",
-                  "       solve();",
-                  "   }",
-                  "}"
-            ],
-		"description": ""
-	},
+      "prefix": "topG",
+      "body": [
+      "#include <bits/stdc++.h>",
+      "using namespace std;",
+      "typedef long long ll;",
+      "const int N = 2e5+123;",
+      "#define vll vector<ll>",
+      "#define pll pair<ll, ll>",
+      "#define endl \"\\n\" ",
+      "#define all(v) v.begin(), v.end()",
+      "",
+      "void solve()",
+      "{",
+      "    ",
+      "}",
+      "",
+      "// --- Think the problem backwards ---",
+      "",
+      "int main()",
+      "{",
+      "    ios_base::sync_with_stdio(0); cin.tie(NULL); ",
+      "    cout.tie(NULL);",
+      "",
+      "    ll tc = 1; cin >> tc;",
+      "    for(int ii=1; ii<=tc; ii++)",
+      "    {",
+      "        //cout << \"Case \" << ii << \": \";",
+      "        solve();",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
 
 	"3": {
-		"prefix": "snip4dbgg",
+		"prefix": "snip4_dbgg",
 		"body": [
-			"",
-			"// debuggggggggggggggg hereeeeeeeeeeee : ",
-			"template < typename F, typename S >",
+      "",
+      "// debuggggggggggggggg hereeeeeeeeeeee : ",
+      "template < typename F, typename S >",
       "ostream& operator << ( ostream& os, const pair< F, S > & p ) {",
       "    return os << \"(\" << p.first << \", \" << p.second << \")\";",
       "}",
@@ -157,8 +170,10 @@
 		],
 		"description": ""
 	},
+
+
 	"4": {
-		"prefix": "Code4HermonicSeries",
+		"prefix": "Code4_HermonicSeries",
 		"body": [
             "vector<ll> cnt(N+1);",
             "",
@@ -175,8 +190,10 @@
 		],
 		"description": ""
 	},
+
+
 	"5": {
-		"prefix": "Code4Sieve",
+		"prefix": "Code4_Sieve",
 		"body": [
             "vector<bool> isPrime(N+1, true);",
             "vector<ll> primes;",
@@ -204,8 +221,10 @@
 		],
 		"description": ""
 	},
+
+
 	"6": {
-		"prefix": "Code4PrimeFact",
+		"prefix": "Code4_PrimeFact",
 		"body": [
             "void primeFactors(ll n)",
             "{",
@@ -228,6 +247,8 @@
 		],
 		"description": ""
 	},
+
+
       "7": {
 		"prefix": "snip4orderedset",
 		"body": [
@@ -242,8 +263,10 @@
 		],
 		"description": ""
 	},
+
+
       "8": {
-		"prefix": "code4Big_mod",
+		"prefix": "snip4_Big_mod",
 		"body": [
             "ll big_mod(ll a, ll b, ll mod)",
             "{",
@@ -260,6 +283,8 @@
 		],
 		"description": ""
 	},
+
+
       "9": {
 		"prefix": "snip4_gcd_lcmm",
 		"body": [
@@ -269,6 +294,8 @@
 		],
 		"description": ""
 	},
+
+
       "10": {
 		"prefix": "snip4_direction_array",
 		"body": [
@@ -278,8 +305,10 @@
 		],
 		"description": ""
 	},
+
+
       "11": {
-      "prefix": "code4SumOfDivisors",
+      "prefix": "code4_SumOfDivisors",
       "body": [
       "ll SumOfDivisors(ll n)",
       "{",
@@ -307,8 +336,10 @@
       ],
       "description": ""
       },
+
+
       "12": {
-      "prefix": "code4SNOD",
+      "prefix": "code4_SNOD",
       "body": [
       "ll SNOD(ll n)",
       "{",
@@ -326,8 +357,10 @@
       ],
       "description": ""
       },
-      "": {
-      "prefix": "code4NOD",
+
+
+      "13": {
+      "prefix": "code4_NOD",
       "body": [
       "ll NOD(ll n)",
       "{",
@@ -352,6 +385,248 @@
       ""
       ],
       "description": ""
-      }
+      },
 
+
+      "14": {
+      "prefix": "code4_DFS",
+      "body": [
+      "ll n, m;",
+      "bool vis[N];",
+      "vector<ll> g[N];",
+      "",
+      "void dfs(ll u)",
+      "{",
+      "    vis[u] = true;",
+      "    for(auto v : g[u])",
+      "    {",
+      "        if(!vis[v])",
+      "        {",
+      "            dfs(v);",
+      "        }",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "15": {
+      "prefix": "code4_BFS",
+      "body": [
+      "vector<ll> g[N];",
+      "bool vis[N];",
+      "vector<ll> lvl(N); ",
+      "",
+      "void bfs(int s) ",
+      "{",
+      "    queue<int> q;",
+      "    q.push(s);",
+      "    vis[s] = true;",
+      "    lvl[s] = 0;",
+      "",
+      "    while (!q.empty()) ",
+      "    {",
+      "        int u = q.front();",
+      "        q.pop();",
+      "",
+      "        for (int v : g[u]) ",
+      "        {",
+      "            if (!vis[v]) ",
+      "            {",
+      "                vis[v] = true;",
+      "                lvl[v] = lvl[u] + 1;",
+      "                q.push(v);",
+      "            }",
+      "        }",
+      "    }",
+      "}"
+      ],
+      "description": ""
+      },
+
+
+      "16": {
+      "prefix": "code4_Cycle detection_DFS",
+      "body": [
+      "// \"If from a node, I can go to an already visited node that is not its parent, then a cycle exists.\"",
+      "bool hasCycle = false;",
+      "void dfs(int u, int parent) ",
+      "{",
+      "    vis[u] = true;",
+      "    for (int v : g[u]) ",
+      "    {",
+      "        if (!vis[v]) ",
+      "        {",
+      "            dfs(v, u);",
+      "        } ",
+      "        else if (v != parent) ",
+      "        {",
+      "            hasCycle = true;",
+      "        }",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+      
+      "17": {
+      "prefix": "snip4_gnu_pds_library",
+      "body": [
+      "#include<ext/pb_ds/assoc_container.hpp>",
+      "#include<ext/pb_ds/tree_policy.hpp>",
+      "using namespace __gnu_pbds;",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "18": {
+      "prefix": "snip4_custom_hash",
+      "body": [
+      "#include<ext/pb_ds/assoc_container.hpp>",
+      "#include<ext/pb_ds/tree_policy.hpp>",
+      "using namespace __gnu_pbds;",
+      "",
+      "struct chash {",
+      "    const int random=(long long int)(make_unique<char>().get())",
+      "        ^ chrono::high_resolution_clock::now().time_since_epoch().count();",
+      "    static unsigned long long splitmix64(unsigned long long x) {",
+      "        x += 0x9e3779b97f4a7c15;",
+      "        x = (x ^ (x >> 30)) * 0xbf58476d1ce4e5b9;",
+      "        x = (x ^ (x >> 27)) * 0x94d049bb133111eb;",
+      "        return x ^ (x >> 31);",
+      "    }",
+      "    int operator()(int x) const {",
+      "        return splitmix64(x+random);",
+      "    }",
+      "    int operator()(pair<int,int> x) const {",
+      "        unsigned num=(x.first^(x.second>>1));",
+      "        return splitmix64(num+random);",
+      "    }",
+      "    //for vector as key I can also do the similarl thing for lower collision",
+      "    long long operator()(string s) const {",
+      "        const int p = 31;  ",
+      "        //for only lowercase p=31,for lowercase+uppercase p=53",
+      "        const int m = 1e9 + 9;",
+      "        long long hash_value = 0;",
+      "        long long p_pow = 1;",
+      "",
+      "        for (char c : s) {",
+      "            hash_value = (hash_value + (c - 'a' + 1) * p_pow) % m;",
+      "            p_pow = (p_pow * p) % m;",
+      "        }",
+      "        return hash_value;",
+      "    }",
+      "};",
+      "//for int as key: unordered_map<int,int,chash>mp; / gp_hash_table<int,int,chash>mp;",
+      "",
+      "//for pair<int,int> as key: unordered_map<pair<int,int>,int,chash>mp; / gp_hash_table<pair<int,int>,int,chash>mp;",
+      "",
+      "//for string as key: unordered_map<string,int,chash>mp; / gp_hash_table<string,int,chash>mp;"
+      ],
+      "description": ""
+      },
+      
+
+      "19": {
+      "prefix": "Code4_Dijkstra",
+      "body": [
+      "vll dist(N);",
+      "vector<pll> g[N];",
+      "",
+      "void dijkstra(ll src, ll n)",
+      "{",
+      "    for(int i=0; i<=n; i++) dist[i] = 1e18;",
+      "    dist[src] = 0;",
+      "    priority_queue<pll, vector<pll>, greater<pll>> pq;",
+      "    pq.push({0, src});",
+      "    while(!pq.empty())",
+      "    {",
+      "        ll curDist = pq.top().first, u = pq.top().second;",
+      "        pq.pop();",
+      "        if(curDist > dist[u]) continue;",
+      "        for(auto edge : g[u])",
+      "        {",
+      "            ll v = edge.first, weight = edge.second;",
+      "            if(weight + curDist < dist[v])",
+      "            {",
+      "                dist[v] = weight + curDist;",
+      "                pq.push({dist[v], v});",
+      "            }",
+      "        }",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "20": {
+      "prefix": "snip4_xor_calc",
+      "body": [
+      "int computeXOR(int n)",
+      "{",
+      " ",
+      "  // If n is a multiple of 4",
+      "  if (n % 4 == 0)",
+      "    return n;",
+      " ",
+      "  // If n%4 gives remainder 1",
+      "  if (n % 4 == 1)",
+      "    return 1;",
+      " ",
+      "  // If n%4 gives remainder 2",
+      "  if (n % 4 == 2)",
+      "    return n + 1;",
+      " ",
+      "  // If n%4 gives remainder 3",
+      "  return 0;",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "21": {
+      "prefix": "snip4_isPowerOfTwo",
+      "body": [
+      "bool isPowerOfTwo(int n) {",
+      "    if (n <= 0) return false;",
+      "    return (n & (n - 1)) == 0;",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+
+      "22": {
+      "prefix": "snip4_bitwise_stuffs",
+      "body": [
+      "bool isKthBitSet(int n, int k) {",
+      "    return (n & (1 << (k))) != 0;",
+      "}",
+      "",
+      "int toggleKthBit(int n, int k) {",
+      "    return n ^ (1 << (k));",
+      "}",
+      "",
+      "int setKthBit(int n, int k) {",
+      "    return n | (1 << (k));",
+      "}",
+      "",
+      "int unsetKthBit(int n, int k) {",
+      "    return n & ~(1 << (k));",
+      "}",
+      ""
+      ],
+      "description": ""
+      }
 }
