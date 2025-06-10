@@ -96,7 +96,7 @@
 
 
 	"3": {
-		"prefix": "snip4_dbgg",
+		"prefix": "zz debugg",
 		"body": [
       "",
       "// debuggggggggggggggg hereeeeeeeeeeee : ",
@@ -170,16 +170,13 @@
 
 
 	"4": {
-		"prefix": "Code4_HermonicSeries",
+		"prefix": "zz NT HermonicSeries",
 		"body": [
             "vector<ll> cnt(N+1);",
             "",
-            "void Hermonic()",
-            "{",
-            "    for(int i=1; i<=N; i++)",
-            "    {",
-            "        for(int j=i; j<=N; j+=i)",
-            "        {",
+            "void Hermonic() {",
+            "    for(int i=1; i<=N; i++) {",
+            "        for(int j=i; j<=N; j+=i) {",
             "            cnt[j]++;",
             "        }",
             "    }",
@@ -190,27 +187,21 @@
 
 
 	"5": {
-		"prefix": "Code4_Sieve",
+		"prefix": "zz NT Sieve",
 		"body": [
             "vector<bool> isPrime(N+1, true);",
             "vector<ll> primes;",
             "",
-            "void sieve()",
-            "{",
+            "void sieve() {",
             "    isPrime[0] = isPrime[1] = false;",
-            "    ll sq = sqrt(N);",
-            "    for(int i=0; i<=sq; i++)",
-            "    {",
-            "        if(isPrime[i])",
-            "        {",
-            "            for(int j = i+i; j<=N; j += i)",
-            "            {",
+            "    for(ll i=0; i*i<N; i++) {",
+            "        if(isPrime[i]) {",
+            "            for(int j = i+i; j<N; j += i) {",
             "                isPrime[j] = false;",
             "            }",
             "        }",
             "    }",
-            "    for(int i=2; i<=N; i++)",
-            "    {",
+            "    for(int i=2; i<=N; i++) {",
             "       if(isPrime[i]) primes.push_back(i);",
             "    }",
             "}"
@@ -221,24 +212,21 @@
 
 
 	"6": {
-		"prefix": "Code4_PrimeFact",
+		"prefix": "zz NT PrimeFact",
 		"body": [
-            "void primeFactors(ll n)",
-            "{",
+            "vll primeFactors(ll n) {",
             "   vector<ll> fact;",
-            "   for(int i=0; i<primes.size(); i++)",
-            "   {",
+            "   for(int i=0; i<primes.size(); i++) {",
             "       if(1LL * primes[i] * primes[i] > n) break;",
-            "       if(n % primes[i] == 0)",
-            "       {",
-            "            while(n % primes[i] == 0)",
-            "            {",
+            "       if(n % primes[i] == 0) {",
+            "            while(n % primes[i] == 0) {",
             "                n /= primes[i];",
             "                fact.push_back(primes[i]);",
             "            }",
             "       }",
             "   }",
             "   if(n > 1) fact.push_back(n);",
+            "   return fact;",
             "}"
 
 		],
@@ -247,7 +235,7 @@
 
 
       "7": {
-		"prefix": "snip4orderedset",
+		"prefix": "zz Ordered set",
 		"body": [
             "//// PBDS (Policy Based Data Structure - Ordered Set)",
             "#include<ext/pb_ds/assoc_container.hpp>",
@@ -263,18 +251,16 @@
 
 
       "8": {
-		"prefix": "snip4_Big_mod",
+		"prefix": "zz NT Binary Expo",
 		"body": [
-            "ll big_mod(ll a, ll b, ll mod)",
-            "{",
-            "      ll ans = 1;",
-            "      while(b)",
-            "     {",
-            "           if(b & 1) ans = (ans * a) % mod;",
-            "           a = (a * a) % mod;",
-            "           b >>= 1;",
-            "      }",
-            "     return ans;",
+            "ll big_mod(ll a, ll b, ll mod) {",
+            "   ll ans = 1;",
+            "   while(b) {",
+            "   if(b & 1) ans = (ans * a) % mod;",
+            "      a = (a * a) % mod;",
+            "      b >>= 1;",
+            "   }",
+            "   return ans;",
             "}"
                   
 		],
@@ -283,7 +269,7 @@
 
 
       "9": {
-		"prefix": "snip4_gcd_lcmm",
+		"prefix": "zz NT gcdlcm",
 		"body": [
                   "ll gcd(ll a,ll b) { return __gcd(a,b); }",
                   "ll lcm(ll a,ll b) { return (a*b)/__gcd(a,b); }",
@@ -294,7 +280,7 @@
 
 
       "10": {
-		"prefix": "snip4_direction_array",
+		"prefix": "zz Snip_4_Direction_Array",
 		"body": [
                   "int dx[] = {0, 0, 1, -1, 1, -1, -1, 1};",
                   "int dy[] = {1, -1, 0, 0, 1, -1, 1, -1};",
@@ -305,19 +291,15 @@
 
 
       "11": {
-      "prefix": "code4_SumOfDivisors",
+      "prefix": "zz NT SumOfDivisors",
       "body": [
-      "ll SumOfDivisors(ll n)",
-      "{",
+      "ll SumOfDivisors(ll n) {",
       "    ll ans = 1;",
-      "    for(int i=0; i<primes.size(); i++)",
-      "    {",
+      "    for(int i=0; i<primes.size(); i++) {",
       "        if(1LL * primes[i] * primes[i] > n) break;",
-      "        if(n % primes[i] == 0)",
-      "        {",
+      "        if(n % primes[i] == 0) {",
       "            ll pwr = 1, sum = 1;",
-      "            while(n % primes[i] == 0)",
-      "            {",
+      "            while(n % primes[i] == 0) {",
       "                n /= primes[i];",
       "                pwr *= primes[i];",
       "                sum += pwr;",
@@ -336,13 +318,11 @@
 
 
       "12": {
-      "prefix": "code4_SNOD",
+      "prefix": "zz NT SNOD (1-N all div count sum)",
       "body": [
-      "ll SNOD(ll n)",
-      "{",
+      "ll SNOD(ll n) {",
       "    ll score = 0;",
-      "    for(ll i=1; i*i <= n; i++)",
-      "    {",
+      "    for(ll i=1; i*i <= n; i++) {",
       "        ll contri_i = (n/i)-i;",
       "        score += contri_i;",
       "    }",
@@ -357,19 +337,15 @@
 
 
       "13": {
-      "prefix": "code4_NOD",
+      "prefix": "zz NT NOD",
       "body": [
-      "ll NOD(ll n)",
-      "{",
+      "ll NOD(ll n) {",
       "    ll ans = 1;",
-      "    for(int i=0; i<primes.size(); i++)",
-      "    {",
-      "        if(primes[i]*primes[i] > n) break;",
-      "        if(n % primes[i] == 0)",
-      "        {",
+      "    for(int i=0; i<primes.size(); i++) {",
+      "        if(1LL * primes[i] * primes[i] > n) break;",
+      "        if(n % primes[i] == 0) {",
       "            ll ct = 0;",
-      "            while(n % primes[i] == 0)",
-      "            {",
+      "            while(n % primes[i] == 0) {",
       "                n /= primes[i];",
       "                ct++;",
       "            }",
@@ -386,19 +362,16 @@
 
 
       "14": {
-      "prefix": "code4_DFS",
+      "prefix": "zz Graph DFS",
       "body": [
       "ll n, m;",
       "bool vis[N];",
       "vector<ll> g[N];",
       "",
-      "void dfs(ll u)",
-      "{",
+      "void dfs(ll u) {",
       "    vis[u] = true;",
-      "    for(auto v : g[u])",
-      "    {",
-      "        if(!vis[v])",
-      "        {",
+      "    for(auto v : g[u]) {",
+      "        if(!vis[v]) {",
       "            dfs(v);",
       "        }",
       "    }",
@@ -410,28 +383,24 @@
 
 
       "15": {
-      "prefix": "code4_BFS",
+      "prefix": "zz Graph BFS",
       "body": [
       "vector<ll> g[N];",
       "bool vis[N];",
       "vector<ll> lvl(N); ",
       "",
-      "void bfs(int s) ",
-      "{",
+      "void bfs(int s) {",
       "    queue<int> q;",
       "    q.push(s);",
       "    vis[s] = true;",
       "    lvl[s] = 0;",
       "",
-      "    while (!q.empty()) ",
-      "    {",
+      "    while (!q.empty()) {",
       "        int u = q.front();",
       "        q.pop();",
       "",
-      "        for (int v : g[u]) ",
-      "        {",
-      "            if (!vis[v]) ",
-      "            {",
+      "        for (int v : g[u]) {",
+      "            if (!vis[v]) {",
       "                vis[v] = true;",
       "                lvl[v] = lvl[u] + 1;",
       "                q.push(v);",
@@ -445,21 +414,17 @@
 
 
       "16": {
-      "prefix": "code4_Cycle detection_DFS",
+      "prefix": "zz Graph Cycle detect DFS",
       "body": [
       "// \"If from a node, I can go to an already visited node that is not its parent, then a cycle exists.\"",
       "bool hasCycle = false;",
-      "void dfs(int u, int parent) ",
-      "{",
+      "void dfs(int u, int parent) {",
       "    vis[u] = true;",
-      "    for (int v : g[u]) ",
-      "    {",
-      "        if (!vis[v]) ",
-      "        {",
+      "    for (int v : g[u]) {",
+      "        if (!vis[v]) {",
       "            dfs(v, u);",
       "        } ",
-      "        else if (v != parent) ",
-      "        {",
+      "        else if (v != parent) {",
       "            hasCycle = true;",
       "        }",
       "    }",
@@ -471,7 +436,7 @@
 
       
       "17": {
-      "prefix": "snip4_gnu_pds_library",
+      "prefix": "zz snip4_gnu_pds_library",
       "body": [
       "#include<ext/pb_ds/assoc_container.hpp>",
       "#include<ext/pb_ds/tree_policy.hpp>",
@@ -483,7 +448,7 @@
 
 
       "18": {
-      "prefix": "snip4_custom_hash",
+      "prefix": "zz snip4_custom_hash",
       "body": [
       "#include<ext/pb_ds/assoc_container.hpp>",
       "#include<ext/pb_ds/tree_policy.hpp>",
@@ -531,27 +496,23 @@
       
 
       "19": {
-      "prefix": "Code4_Dijkstra",
+      "prefix": "zz Graph Dijkstra",
       "body": [
       "vll dist(N);",
       "vector<pll> g[N];",
       "",
-      "void dijkstra(ll src, ll n)",
-      "{",
+      "void dijkstra(ll src, ll n) {",
       "    for(int i=0; i<=n; i++) dist[i] = 1e18;",
       "    dist[src] = 0;",
       "    priority_queue<pll, vector<pll>, greater<pll>> pq;",
       "    pq.push({0, src});",
-      "    while(!pq.empty())",
-      "    {",
+      "    while(!pq.empty()) {",
       "        ll curDist = pq.top().first, u = pq.top().second;",
       "        pq.pop();",
       "        if(curDist > dist[u]) continue;",
-      "        for(auto edge : g[u])",
-      "        {",
+      "        for(auto edge : g[u]) {",
       "            ll v = edge.first, weight = edge.second;",
-      "            if(weight + curDist < dist[v])",
-      "            {",
+      "            if(weight + curDist < dist[v]) {",
       "                dist[v] = weight + curDist;",
       "                pq.push({dist[v], v});",
       "            }",
@@ -565,24 +526,12 @@
 
 
       "20": {
-      "prefix": "snip4_xor_calc",
+      "prefix": "zz NT xor_calc",
       "body": [
-      "int computeXOR(int n)",
-      "{",
-      " ",
-      "  // If n is a multiple of 4",
-      "  if (n % 4 == 0)",
-      "    return n;",
-      " ",
-      "  // If n%4 gives remainder 1",
-      "  if (n % 4 == 1)",
-      "    return 1;",
-      " ",
-      "  // If n%4 gives remainder 2",
-      "  if (n % 4 == 2)",
-      "    return n + 1;",
-      " ",
-      "  // If n%4 gives remainder 3",
+      "int computeXOR(int n) {",
+      "  if (n % 4 == 0) return n;",
+      "  if (n % 4 == 1) return 1;",
+      "  if (n % 4 == 2) return n + 1;",
       "  return 0;",
       "}",
       ""
@@ -592,7 +541,7 @@
 
 
       "21": {
-      "prefix": "snip4_isPowerOfTwo",
+      "prefix": "zz NT isPowerOfTwo",
       "body": [
       "bool isPowerOfTwo(int n) {",
       "    if (n <= 0) return false;",
@@ -605,36 +554,22 @@
 
 
       "22": {
-      "prefix": "snip4_bitwise_stuffs",
+      "prefix": "zz NT bitwise_stuffs",
       "body": [
-      "#define LSONE(x) ((x) & -(x))",
       "#define ONBIT(x, k) ((x) | (1ll << k))",
       "#define OFFBIT(x, k) ((x) & (~ (1ll << k)))",
-      "#define IFONBIT(x, k) ((x) & (1ll << k))",
+      "#define ONOROFF(x, k) ((x) & (1ll << k))",
       "#define FLIPBIT(x, k) ((x) ^ (1ll << k))",
       " ",
       "int pop_count(int x) { return __builtin_popcount(x); }",
-      "int pop_count(ll x) { return __builtin_popcountll(x); }",
-      "// (0, 1, 2, 3, 4) -> (-1, 0, 1, 1, 2)",
-      "int leading_zero(int x) { return (x == 0 ? -1 : 31 - __builtin_clz(x)); }",
-      "int leading_zero(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x)); }",
-      "// (0, 1, 2, 3, 4) -> (-1, 0, 1, 0, 2)",
-      "int tailing_zero(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }",
-      "int tailing_zero(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }",
+      "int pop_countll(ll x) { return __builtin_popcountll(x); }",
+
+      "int MSB_index(int x) { return (x == 0 ? -1 : 31 - __builtin_clz(x)); }",
+      "int MSB_indexll(ll x) { return (x == 0 ? -1 : 63 - __builtin_clzll(x)); }",
+
+      "int LSB_index(int x) { return (x == 0 ? -1 : __builtin_ctz(x)); }",
+      "int LSB_indexll(ll x) { return (x == 0 ? -1 : __builtin_ctzll(x)); }",
       "",
-      "bool isKthBitSet(int n, int k) {",
-      "    return (n & (1 << (k))) != 0;",
-      "}",
-      "int toggleKthBit(int n, int k) {",
-      "    return n ^ (1 << (k));",
-      "}",
-      "int setKthBit(int n, int k) {",
-      "    return n | (1 << (k));",
-      "}",
-      "int unsetKthBit(int n, int k) {",
-      "    return n & ~(1 << (k));",
-      "}",
-      ""
       ],
       "description": ""
       },
@@ -646,5 +581,245 @@
       "#define no cout << \"NO\" << endl"
       ],
       "description": ""
-}
+    },
+
+    "24": {
+      "prefix": "zz Graph DSU",
+      "body": [
+      "vll par(N), sz(N);",
+      "",
+      "ll find_par( ll u ) {",
+      "    if(par[u] == u) return u;",
+      "    return par[u] = find_par(par[u]);",
+      "}",
+      "",
+      "void Union(ll u, ll v) {",
+      "    if(sz[u] < sz[v]) swap(u, v);",
+      "    par[v] = u;",
+      "    sz[u] += sz[v];",
+      "}",
+      "for(int i=0; i<=n; i++) par[i] = i, sz[i] = 1;",
+      ""
+      ],
+      "description": ""
+      },
+
+      "25": {
+      "prefix": "zz Geometry point_Location",
+      "body": [
+      "ll point_location(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
+      "    ll cross = (x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1);",
+      "    if (cross == 0) return 0;  // TOUCH / ON THE LINE",
+      "    else if (cross > 0) return 1;  // LEFT",
+      "    else return -1;  // RIGHT",
+      "}",
+      "",
+      "bool isInside(ll x1, ll y1, ll x2, ll y2, ll x3, ll y3) {",
+      "    ",
+      "    ll chk = point_location(x1, y1, x2, y2, x3, y3);  // chk == 0, same Line",
+      "    if(chk == 0) {",
+      "        if(x3 >= min(x1, x2) && x3 <= max(x1, x2) && y3 >= min(y1, y2) && y3 <= max(y1, y2)) return true;",
+      "    }",
+      "    return false;",
+      "}"
+      ],
+      "description": ""
+      },
+
+      "26": {
+      "prefix": "zz Geometry Convex_Hull",
+      "body": [
+      "vector<pair<ll, ll>> convex_hull(vector<pair<ll, ll>>p) {",
+      "  ll m, k=1, n=p.size(); if(n<=1) return p;",
+      "  sort(p.begin(), p.end()); ",
+      "  vector<pair<ll, ll>>hull; k=hull.size();",
+      "",
+      "  for(ll i=0; i<n; i++) {",
+      "    m = hull.size();",
+      "    while( m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second) > 0) {  // >=0 dile same point thakle mibe na",
+      "      hull.pop_back();                            // mane hoilo p1 and p2 doita same line e ",
+      "      m = hull.size();                              // thakle ekta nibe",
+      "    }",
+      "    hull.push_back(p[i]);",
+      "  }",
+      "",
+      "  hull.pop_back(); ",
+      "  k=hull.size();",
+      "",
+      "  for(ll i=n-1; i>=0; i--) {",
+      "    m = hull.size();",
+      "    while(m >= k+2 && point_location(hull[m-2].first, hull[m-2].second, hull[m-1].first, hull[m-1].second, p[i].first, p[i].second)>0) {",
+      "      hull.pop_back();",
+      "      m = hull.size();",
+      "    }",
+      "    hull.push_back(p[i]);",
+      "  }",
+      "",
+      "  hull.pop_back();",
+      "  return hull;",
+      "}"
+      ],
+      "description": ""
+      },
+
+      "27": {
+      "prefix": "zz NT Bin-Dec Convertion",
+      "body": [
+      "ll binaryToDecimal(string &s) {",
+      "    ll ans = 0;",
+      "    ll base = 1; ",
+      "",
+      "    for (ll i = s.length() - 1; i >= 0; i--) {",
+      "        if (s[i] == '1') {",
+      "            ans += base;",
+      "        }",
+      "        base *= 2;",
+      "    }",
+      "    return ans;",
+      "}",
+      "",
+      "string decimalToBinary(ll n) {",
+      "    bitset<10> b(n);",
+      "    string s = b.to_string();",
+      "    return s;",
+      "}",
+      "",
+      ""
+      ],
+      "description": ""
+      },
+
+      "28": {
+      "prefix": "zz NT print_binary",
+      "body": [
+      "void print_binary(ll n) {",
+      "    for(int i=31; i>=0; i--) {",
+      "        cout << ((n >> i) & 1);",
+      "    }",
+      "    cout << endl;",
+      "}"
+      ],
+      "description": ""
+      },
+
+     "29": {
+      "prefix": "zz 2D prefix Sum",
+      "body": [
+      "void solve() {",
+      "    int n, m; cin >> n >> m;",
+      "    vector<vll> arr(n+1, vll (m+1));",
+      "    vector<vll> pref(n+1, vll (m+1));",
+      "    for (int i = 1; i <= n; i++) {",
+      "        for (int j = 1; j <= m; j++) {",
+      "            cin >> arr[i][j];",
+      "        }",
+      "    }",
+      "    for (int i = 1; i <= n; i++) {",
+      "        for (int j = 1; j <= m; j++) {",
+      "            pref[i][j] = pref[i - 1][j] + pref[i][j - 1] - pref[i - 1][j - 1] + arr[i][j];",
+      "        }",
+      "    }",
+      "    int q; cin >> q;",
+      "    while (q--) {",
+      "        int x1, y1, x2, y2; cin >> x1 >> y1 >> x2 >> y2;",
+      "        int ans = 0;",
+      "        ans = pref[x2][y2] - pref[x1 - 1][y2] - pref[x2][y1 - 1] + pref[x1 - 1][y1 - 1];",
+      "        cout << ans << endl;",
+      "    }",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+      "30": {
+      "prefix": "zz Geometry Polygon Area",
+      "body": [
+      "ll polygon_area(vector<pll> &vp) {",
+      "    ll sum_1 = 0, sum_2 = 0, n = vp.size(), area = 0;",
+      "    for(int i=0; i<n-1; i++) {",
+      "        sum_1 += (vp[i].first * vp[i+1].second);",
+      "        sum_2 += (vp[i].second * vp[i+1].first);",
+      "    }",
+      "",
+      "    area =  sum_1 - sum_2; // div by 2 is actial rule but here asked for 2*area;",
+      "    return abs(area);",
+      "}",
+      ""
+      ],
+      "description": ""
+      },
+
+      "31": {
+      "prefix": "zz String Hashing",
+      "body": [
+      "//primes = {285897553, 745494041, 693888673, 950758511, 282174533, 847345579, 722520917, 354688703, 963459817, 139793893};",
+      "const int N = 1e6+12;",
+      "const int b1 = 137, b2 = 277;",
+      "const int M1 = 1e9+7, M2 = 139793893;",
+      "pair<int, int> pw[N], ipw[N], pref[N];",
+      "",
+      "ll big_mod(ll a, ll b, ll mod) {",
+      "   ll ans = 1;",
+      "   while(b) {",
+      "   if(b & 1) ans = (ans * a) % mod;",
+      "      a = (a * a) % mod;",
+      "      b >>= 1;",
+      "   }",
+      "   return ans;",
+      "}",
+      "",
+      "void prePower() {",
+      "   pw[0] = {1, 1};",
+      "   for(int i=1; i<N; i++) {",
+      "      pw[i].first = (1LL * pw[i-1].first * b1) % M1;",
+      "      pw[i].second = (1LL * pw[i-1].second * b2) % M2;",
+      "   }",
+      "",
+      "   ll p1_inv = big_mod(b1, M1-2, M1);",
+      "   ll p2_inv = big_mod(b2, M2-2, M2);",
+      "   ",
+      "   ipw[0] = {1, 1};",
+      "   for(int i=1; i<N; i++) {",
+      "      ipw[i].first = (1LL * ipw[i-1].first * p1_inv) % M1;",
+      "      ipw[i].second = (1LL * ipw[i-1].second * p2_inv) % M2;",
+      "   }",
+      "}",
+      "",
+      "pair<int, int> hash_of(string s) {",
+      "    int n = s.size();",
+      "    pair<int, int> hs = {0, 0};",
+      "    for(int i=0; i<n; i++) {",
+      "        hs.first += (1LL * s[i] * pw[i].first) % M1;",
+      "        hs.first %= M1;",
+      "        hs.second += (1LL * s[i] * pw[i].second) % M2;",
+      "        hs.second %= M2;",
+      "    }",
+      "    return hs;",
+      "}",
+      "",
+      "void build(string s) {",
+      "    int n = s.size();",
+      "    for(int i=0; i<n; i++) {",
+      "        pref[i].first = (1LL * s[i] * pw[i].first) % M1;",
+      "        if(i) pref[i].first = (pref[i].first + pref[i-1].first) % M1;",
+      "        pref[i].second = (1LL * s[i] * pw[i].second) % M2;",
+      "        if(i) pref[i].second = (pref[i].second + pref[i-1].second) % M2;",
+      "    }",
+      "}",
+      "",
+      "pair<int, int> get_hash(int i, int j) {",
+      "    pair<int, int> hs = {0, 0};",
+      "    hs.first = pref[j].first;",
+      "    if(i) hs.first = ( ((hs.first - pref[i-1].first) % M1) + M1) % M1;",
+      "    hs.first = (1LL * hs.first * ipw[i].first) % M1;",
+      "",
+      "    hs.second = pref[j].second;",
+      "    if(i) hs.second = ( ((hs.second - pref[i-1].second) % M2) + M2) % M2;",
+      "    hs.second = (1LL * hs.second * ipw[i].second) % M2;",
+      "    return hs;",
+      "}",
+      ],
+      "description": ""
+      }
 }
